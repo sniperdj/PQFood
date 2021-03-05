@@ -6,7 +6,7 @@
 
 <script>
 
-import pqtabbar from './components/base-ui/pqtabbar.vue'
+import pqtabbar from './components/base-ui/tabbar/pqtabbar.vue'
 
 export default {
   name: 'App',
