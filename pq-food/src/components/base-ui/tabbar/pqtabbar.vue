@@ -15,6 +15,7 @@ export default {
     data() {
         return {
             active: 0,
+            // iconurl:"~@/assets/img/food.png"
         }
     },
     components:{
