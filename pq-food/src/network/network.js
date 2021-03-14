@@ -4,14 +4,14 @@ import axios from 'axios'
 // if(process.env.NODE_ENV == 'production' && configURL.baseURL) {
 //     axios.defaults.baseURL = configURL.baseURL
 // }
-// const network = axios.create()
+const network = axios.create()
 // axios.defaults.baseURL = 'http://39.105.221.84/'
-const network = axios.create({
-  baseURL: 'http://39.105.221.84/',
-  headers: {
-      'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
-  }
-})
+// const network = axios.create({
+//   baseURL: 'http://39.105.221.84/',
+//   headers: {
+//       'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+//   }
+// })
 const axiosGet = network.get
 // const axiosPost = network.post
 
@@ -34,7 +34,7 @@ network.interceptors.request.use(config => {
 
 network.interceptors.response.use(response => {
     // loading.close()
-    if(response.status == 200 && response.data.code == 1) {
+    if(response.status == 200) {
         return Promise.resolve(response.data)
     }else if(response.data.code == 2){
         this.$router.push('/error')

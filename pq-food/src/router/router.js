@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/business/home/pqhome.vue'
+import HomeDetail from '@/business/home/pqhomedetail.vue'
 import MyError from '@/common/views/error.vue'
 
 Vue.use(VueRouter)
@@ -14,6 +15,11 @@ Vue.use(VueRouter)
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/homedetail',
+      name: 'homedetail',
+      component: HomeDetail
     },
     {
       path: '/',
